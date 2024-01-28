@@ -1,0 +1,42 @@
+<% layout('/layouts/boilerplate') -%>
+  <body>
+    <div class="row  mt-3">
+      <div class="col-8">
+        <br><br>
+    <h3>Add Details</h3>
+
+    <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">     
+      <div class="mb-3 mt-2">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" name="listing[title]" class="form-control" required/>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea name="listing[description]" placeholder="Enter description"  class="form-control" required></textarea>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price:</label>
+          <input type="number" name="listing[price]" class="form-control" required/>
+        </div>
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country:</label>
+          <input type="text" name="listing[country]" class="form-control" required/>
+        </div>
+      </div>
+      
+      <div class="mb-3">
+        <label for="location" class="form-label">Location:</label>
+        <input type="text" name="listing[location]" class="form-control" required/>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" name="listing[image]" class="form-control" required/>
+      </div>
+      <button type="submit" class="btn btn-dark add-btn btn-lg  mt-3">Add</button>
+    </form>
+    </div>
+  </div>
+  </body>
+</html>

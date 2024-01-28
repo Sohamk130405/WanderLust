@@ -1,0 +1,42 @@
+<% layout('/layouts/boilerplate') -%>
+  <body>
+    <div class="row mt-3">
+      <div class="col-8">
+    <h3>Add Details</h3>
+    <form action="/listings/<%= listing._id %>?_method=PATCH" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" name="listing[title]" value="<%= listing.title %>"  class="form-control" required/>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Add description:</label>
+        <textarea name="listing[description]"  placeholder="Enter description" class="form-control" required><%= listing.description %></textarea>
+      </div>
+     <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price:(in Rupees)</label>
+        <input type="number" value="<%= listing.price %>" name="listing[price]" class="form-control" required/>
+      </div>
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country:</label>
+        <input type="text" name="listing[country]" value="<%= listing.country %>"class="form-control"required />
+      </div>
+     </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location:</label>
+        <input type="text"  value="<%= listing.location %>" name="listing[location]"class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <p>Original Image:</p>
+        <img src="<%=orgImgUrl%>" alt="">
+      </div>
+      <div class="mb-3">
+        <label for="title" class="form-label">Image</label>
+        <input type="file" name="listing[image]"  value="<%= listing.image %>" class="form-control"/>
+      </div>
+      <button type="submit" class="btn btn-dark btn-lg add-btn mt-3">Update</button>
+    </form>
+  </div>
+  </div>
+  </body>
+</html>
