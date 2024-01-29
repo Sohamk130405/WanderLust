@@ -1,5 +1,5 @@
 <% layout('/layouts/boilerplate') -%>
-    <div class="row category">
+    <div class="row category m-0">
         <div class="filters col-md-10">
             <div class="filter">
                 <div class="icon"><i class="fa-solid fa-fire"></i></div>
@@ -46,9 +46,9 @@
         </div>
     </div>
     
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-6 mt-3" >
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-6 mt-3">
         <% allListings.forEach(listing => { %>
-            <div class="card col listing-card" onclick="location.href='/listings/<%= listing._id%>'" >
+            <div class="card col listing-card pt-3" onclick="location.href='/listings/<%= listing._id%>'" >
                 <img src="<%= listing.image.url %>" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">

@@ -38,6 +38,10 @@ body{
   color: aliceblue;
   background-color: #fe242d;
 }
+
+#navbarNavAltMarkup{
+  background-color: white;
+}
 /* Category */
 .category{
   display: flex;
